@@ -1,3 +1,7 @@
+## python files
+venv
+data/*
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
