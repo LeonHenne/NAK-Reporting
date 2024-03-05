@@ -2,6 +2,9 @@
 venv
 data/*
 
+## final pdf product
+*.pdf
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
