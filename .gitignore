@@ -1,6 +1,6 @@
 ## python files
 venv
-data/*
+src/data/*
 
 ## final pdf product
 *.pdf

@@ -144,5 +144,9 @@
         "**/*-tags.tex": true,
         "**/*.sta": true,
         "**/*.lpz": true
-    }
+    },
+    "cSpell.language": "de-DE,en,de",
+    "cSpell.enableFiletypes": [
+        "latex"
+    ]
 }

@@ -1,10 +1,25 @@
 \chapter[Zielsetzung]{Zielsetzung}
 
-Inhalt dieses Kapitels ist zunächst die Erläuterung des gewählten Datensatzes.
-Anschließend werden daraus abgeleitete Forschungsfragen formuliert, welche im Rahmen dieser Arbeit durch die Entwicklung und Analyse von Visualisierungen untersucht werden. 
+Aus der dargelegten Problemstellung leitet sich für diese Arbeit die folgende Zielsetzung ab:
+
+\begin{center}
+    \textit{visuelle Untersuchung der Beziehungen von Einflussfaktoren auf die schulische Leistung im Kontext der Oberschule.}
+\end{center}    
+
+% Erläuterung der Absicht mit Bezug auf die Zielgruppe dieser Arbeit
+Zielgruppe der damit entwickelten Visualisierungen bilden unmittelbar Lehrerinnen und Lehrer sowie auch Sozialkräfte in schulischen Einrichtungen. 
+Diese tragen u. a. die direkte Lehr- und Integrationsverantwortung, bei welcher sie durch ein besseres Verständnis der Einflussfaktoren auf das Lernergebnis unterstützt werden.
+Aus dem organisatorischen- und Projektplanungsinteresse kann auch die Schulleitung der Zielgruppe hinzugefügt werden.
+Der Schulleitung kann ein besseres Verständnis der Einflussfaktoren bei der Planung und Umsetzung von Schulprojekten zur besseren Gestaltung der Lernumgebung helfen.
+
+% TODO: \textbf{Beschreibung der Zielgruppeneigenschaften und daraus Anforderungen mit Bezug auf Data Analytics}
+
+% Zu dessen Bearbeitung wird in diesem Kapitel zunächst der hierfür gewählte Datensatz erläutert.
+% Anschließend werden daraus abgeleitete Forschungsfragen formuliert, welche durch die Entwicklung und Analyse von Visualisierungen untersucht werden. 
 
 \section[Untersuchter Datensatz]{Datensatz}
 
+%  Intro zur Absicht dieser Sektion
 Der in dieser Arbeit betrachtete Datensatz entstammt der Arbeit von \cite[]{Cortez2008UsingDM}.
 Motiviert wurde diese Forschung durch Statistiken, welche Portugal im europäischen Vergleich als deutlich unterdurchschnittlich klassifizierten, aufgrund von hohen Durchfallquoten. \cite[S. 1]{Cortez2008UsingDM}
 Daher wurde mit dieser Arbeit ein realer Datensatz erhoben.
@@ -12,19 +27,36 @@ Hierfür wurden Schulleisten und schulbezogene Faktoren vom Berichtswesen gesamm
 Die schulbezogenen Faktoren beziehen sich dabei auf die Leistungen in den Schulfächern Mathematik und Portugiesisch, da Inhalte dieser Fächer übergreifend in anderen Fächern zum Einsatz kommen. \cite[S. 2]{Cortez2008UsingDM}
 Zielgruppe der Untersuchung waren Schüler der dreijährigen zweiten Bildungsphase in Portugal, welche auf der ersten neunjährigen Phase aufbaut. \cite[S. 2]{Cortez2008UsingDM}
 Mittels der Berichte und Umfragen wurden schulbezogene-, demografische-, und soziale Faktoren von 395 Mathematik-Schülern und 649 Portugiesisch-Schülern der \textit{Gabriel Pereira} und der \textit{Mousinho da Silveira} erhoben.
-Alle erhobenen Faktoren, welche im Rahmen der Analyse auch als Variablen oder Merkmale bezeichnet werden, können der nachfolgenden Liste entnommen werden. 
+Alle erhobenen Faktoren, welche im Rahmen der Analyse auch als Variablen oder Merkmale bezeichnet werden, lassen sich mit ihrem Datentyp der \autoref{tab:Table2.1} entnehmen. 
+Detaillierte Informationen zu dessen Erläuterung und ihren Ausprägungen der \autoref{tab:detailed_data} im Anhang entnommen werden.
+
+% TODO: \textbf{Evtl: Datenerhebungsprozess}
 
 \input{tables/data_summary.tex}
 
-Detaillierte Informationen zu dessen Erläuterung und ihren Ausprägungen der \textbf{Tabelle X} im Anhang entnommen werden.
-
-\textbf{Evtl: Datenerhebungsprozess}
 
 \section[Forschungsfragen]{Forschungsfragen}
 
+% Ableitung von interessanten Forschungsfragen
+Im Anschluss an die Beschreibung des Datensatzes gilt es die zuvor benannte Zielstellung zu konkretisieren. 
+Dazu werden nachfolgend die für den Rahmen dieser Arbeit zu betrachteten Fragestellungen bestimmt, anhand derer in den folgenden Kapiteln Visualisierungen erstellt und analysiert werden.
+Beziehen wir hierfür die verschiedenen Interessen und Handlungsmöglichkeiten der Zielgruppen ein, ergeben sich drei Haupthandlungsfelder für die Einflussnahme auf die Lernleistung.
+Diese Umfassen die infrastrukturelle Gestaltung der Schule, die individuelle Förderung des sozialen Umfelds der Schüler und die unmittelbare Aufbereitung der Lehrinhalte als Unterrichtsformat.
+Werden diesen Handlungsfeldern die aus dem Datensatz bekannten Attribute zugeordnet, ergeben sich folgende Forschungsfragen:
+% Der Effekt dieser Handlungsfelder lässt sich mittels der folgenden Forschungsfragen untersuchen:
+
 \begin{itemize}
-    \item Intro zur Absicht dieser Sektion
-    \item Erläuterung der Absicht mit Bezug auf die Zielgruppe dieser Arbeit
-    \item Einleitung zu den bereits erkannten Variablen ?
-    \item Ableitung von interessanten Forsch
+    % structural
+    \item Forschungsfrage 1: Welche individuellen und strukturellen Faktoren wirken sich auf die schulischen Leistungen aus ?
+        % sex, age, reason, traveltime, internet, nursery, higher, freetime, dalc, walc, health
+        \subitem \textbf{Attribute}: Geschlecht, Alter, Grund der Schulentscheidung, Pendelzeit, häuslicher Internetzugang, Besuch der Vorschule, Absicht zur Weiterbildung, außerschulische Freizeit, Alkoholkonsum unter der Woche, Alkoholkonsum am Wochenende, Gesundheitszustand
+    % social
+    \item Forschungsfrage 2: Wie beeinflusst das soziale Umfeld die Schulleistungen der Schülerinnen und Schüler ? 
+        % address, famsize, Pstatus, medu, fedu, mjob, fjob, guardian, romantic, famrel, goout
+        \subitem \textbf{Attribute}: Wohngegend, Familiengröße, Zusammenleben der Eltern, Mutters Bildungsgrad, Vaters Bildungsgrad, Mutters Arbeitsbereich, Vaters Arbeitsbereich, Erziehungsberechtigter, Partnerliche Beziehung, Qualität der Familienbeziehungen, soziale Aktivitäten
+    % performance
+    \item Forschungsfrage 3: Wie wird die tatsächliche Bewertung der Lernleistung von der Individuelle Leistungsbereitschaft beeinflusst?
+        % studytime, failures, activities, schoolsup, famsup, paid, absences
+        \subitem \textbf{Attribute}: Lernzeit, Anzahl durchgefallener Kurse, AG-Teilnahme, externe Lernunterstützung, familiäre Lernunterstützung, bezahlter Extraunterricht, Fehltage
 \end{itemize}
+% bereits erkannte wichtige Variablen, bzw Annahmen zu den Variablen jedes Themenbereichs ?
