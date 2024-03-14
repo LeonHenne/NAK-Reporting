@@ -1,20 +1,49 @@
 \chapter[Untersuchung der Forschungsfrage]{Untersuchung der Forschungsfrage}
 
-\section{Individuelle und strukturelle Faktoren}
-% Idee: gewisse Variablen nehmen und aus deren Ausprägungen Cluster bilden und dann die Cluster zu den Noten mappen
-\begin{itemize}
-    \item Scatterplot: (1-2: visuell, 3-x: cluster bestimmen) strukturelle Anforderungen und Noteneffekt darstellen
-\end{itemize}
+Dieses Kapitel dient der Untersuchung der Forschungsfragen. 
+In Abhängigkeit des untersuchten Handlungsbereichs werden die hierfür notwendigen Datentransformationen erläutert. 
+Anschließend gilt es aufgrund der Vielzahl an Attributen, die für die Untersuchung relevanten Merkmale zu identifizieren. 
+Final wird die Beantwortung der Forschungsfrage, durch die Vorstellung und Analyse der entwickelten Visualisierungen vorgenommen.
 
+\section{Individuelle und strukturelle Faktoren}
+
+% Erläuterung der Datenstruktur: merged, left join, individual (mat\_df, por\_df)
+Zur Untersuchung dieser Faktoren eignet sich besonders ein fachübergreifende Perspektive, da eine fachspezifische unterschiedliche Auswirkung nur schwierig kausal zu erklären ist.
+Im Weiteren wird dadurch eine Erhöhung der Datenmenge erzielt, da alle Attribute vollständig in dem Datensatz der Portugiesisch-Schüler und Mathematik-Schüler enthalten sind.
+Die Migrierung beider Datenstände wird anhand der Attribute vorgenommen, welche im, unter (\cite[]{student_performance}) verfügbaren, R-Skript benannt werden.
+Insgesamt erhält der Datensatz damit 657 Einträge. 
+
+% \item Auswahl der Variablen in Abhängigkeit zur Frage:
+% \subitem individuell: Geschlecht, Alter, Besuch der Vorschule, Absicht zur Weiterbildung, außerschulische Freizeit, Alkoholkonsum unter der Woche, Alkoholkonsum am Wochenende, Gesundheitszustand
+% \subitem strukturell: Grund der Schulentscheidung, Pendelzeit, häuslicher Internetzugang,
+Mit der in dieser Sektion betrachteten Faktoren ergibt sich die gleichnamige Aufteilung der Attribute zu den Aspekten der individuellen Eigenschaften und Verhaltensweisen und der strukturellen Gegebenheiten.
+Individuelle Merkmale lassen sich zum einen durch die Möglichkeit zur aktuellen Einflussnahme durch den Schüler selbst filtern.
+Zum Anderen tritt die Absicht zur Weiterbildung zwar in diesem Kontext als Prädiktor des Lernerfolgs auf, die alleinige Absicht selbst nimmt jedoch hierauf keinen unmittelbaren Einfluss.
+Damit werden die Attribute \textit{außerschulische Freizeit, Alkoholkonsum unter der Woche, Alkoholkonsum am Wochenende, Gesundheitszustand} in die Untersuchung einfließen.
+Strukturelle Gegebenheiten werden im Kontext dieser Arbeit durch den Grund der Schulentscheidung, die Pendelzeit und den häuslichen Internetzugang beschrieben.
+Aus diesen Merkmalen kann besonders der Pendelzeit und dem häuslichen Internetzugang ein potenzieller kausaler Zusammenhang anhand des täglichen zusätzlichen Reiseaufwands und dem Zugang zu Onlinewissen unterstellt werden.
+Daher werden dazu diese beiden Attribute für die Untersuchung ausgewählt.
+% \item Grafik idee:
+% \subitem : (außerschulische Freizeit, dalc, walc, health) 
+% \subitem Scatterplot: (Pendelzeit, Internet, G3) strukturelle Anforderungen und Noteneffekt darstellen
+
+% ~1100 WORDS UNTIL HERE !!! 
 \section{Soziales Umfeld}
 
 \begin{itemize}
-    \item Scatterplot: Bestimmen von Personengruppen anhand von visuellem (1-2) oder maschinellem (3-x) Clustering.
-    \item Säulendiagramm: Median der Notenleistung (G3) zu den einzelnen Personengruppen
+    \item Erläuterung der Datenstruktur: merged, left join, individual (mat\_df, por\_df)
+    \item Auswahl der Variablen in Abhängigkeit zur Frage:
+    \subitem address, famsize, Pstatus, medu, fedu, mjob, fjob, guardian, romantic, famrel, goout
+    \item Grafik idee:
+    \subitem Scatterplot: Bestimmen von Personengruppen anhand von visuellem (1-2) oder maschinellem (3-x) Clustering.
+    \subitem Säulendiagramm: Median der Notenleistung (G3) zu den einzelnen Personengruppen
 \end{itemize}
 
 \section{Individuelle Leistungsbereitschaft}
 
 \begin{itemize}
-    \item ?? vlt zielgruppe doch eher Schüler ?
+    \item Erläuterung der Datenstruktur: merged, left join, individual (mat\_df, por\_df)
+    \item Auswahl der Variablen in Abhängigkeit zur Frage:
+    \subitem studytime, failures, activities, schoolsup, famsup, paid, absences
+    \item Grafik idee:
 \end{itemize}
