@@ -24,7 +24,8 @@ Strukturelle Gegebenheiten werden im Kontext dieser Arbeit durch den Grund der S
 Aus diesen Merkmalen kann besonders der Pendelzeit und dem häuslichen Internetzugang ein potenzieller kausaler Zusammenhang anhand des täglichen zusätzlichen Reiseaufwands und dem Zugang zu Onlinewissen unterstellt werden.
 Daher werden dazu diese beiden Attribute für die Untersuchung ausgewählt.
 % \item Grafik idee:
-    % \subitem : (außerschulische Freizeit, dalc, walc, health) 
+    % \subitem : (außerschulische Freizeit, dalc, walc, health)
+    % \subitem gestapeltes Balkendiagramm: (sum of dalc and walc, G3 gruppen)
     % \subitem Scatterplot: (Pendelzeit, Internet, G3) strukturelle Anforderungen und Noteneffekt darstellen
 
 % ~1100 WORDS UNTIL HERE !!! 
@@ -41,8 +42,11 @@ Dadurch kommen für die folgende Untersuchung der gleichen Datentransformationen
 In der Auswahl von Attributen wird sich zum einen auf das familiäre Umfeld beschränkt. 
 Dabei werden konkret die Merkmale Familiengröße und Qualität der Familienbeziehungen untersucht, und die Information zum Zusammenleben der Eltern, Bildungsgrad und Arbeitsbereich der Eltern und dem Sorgerecht exkludiert.
 Diese Entscheidung begründet sich darin, dass anzunehmen ist, dass sich die Effekte der ausgeschlossenen Variablen in der Qualität der Familienbeziehungen konsolidiert wiederspiegeln.
+Zum anderen werden 
 
 % \item Grafik idee:
+%     \subitem (famsize, famrel)
+%     \subitem (romantic, goout)
 %     \subitem Scatterplot: Bestimmen von Personengruppen anhand von visuellem (1-2) oder maschinellem (3-x) Clustering.
 %     \subitem Säulendiagramm: Median der Notenleistung (G3) zu den einzelnen Personengruppen
 
@@ -56,12 +60,12 @@ Entsprechend werden in dieser Sektion alle entwickelten Visualisierungen jeweils
 
 % \item Auswahl der Variablen in Abhängigkeit zur Frage:
     % \subitem studytime, failures, activities, schoolsup, famsup, paid, absences
-Von den dem Handlungsbereich zugeordneten Attributen zeigen Lernzeit, Anzahl bereits durchgefallener Kurse, externe
-Lernunterstützung, familiäre Lernunterstützung, bezahlter Extraunterricht und Fehltage eine besondere Relevanz für die Lernleistung. 
+Von den dem Handlungsbereich zugeordneten Attributen zeigen Lernzeit, Anzahl bereits durchgefallener Kurse, externe Lernunterstützung, familiäre Lernunterstützung, bezahlter Extraunterricht und Fehltage eine besondere Relevanz für die Lernleistung. 
 In dieser Ergründung der Einflussfaktoren wird lediglich die AG-Teilnahme exkludiert, da hiermit zwar Zusatzarbeiten, jedoch abseits vom fachlichen Thema, geleistet werden.
 
 % \item Grafik idee:
-    % \subitem Scatterplot: (Summe der Unterstützungen) aggregierte Lernunterstützung (Summe der Unterstützungen) mit G3
+    % \subitem (studytime, failures, schoolsup, famsup, paid, absences)
+    % \subitem Scatterplot: (Summe der Unterstützungen-schoolsup, famsup, paid) aggregierte Lernunterstützung (Summe der Unterstützungen) mit G3
     % \subitem Säulendiagramm oder Boxplots: (schoolsup, famsup, paid) Lernunterstützung  und deren aggr. median (G3)
     
     % \subitem (studytime, failures, absences)
