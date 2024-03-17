@@ -8,23 +8,23 @@ Final wird die Beantwortung der Forschungsfrage, durch die Vorstellung und Analy
 \section{Individuelle und strukturelle Faktoren}
 
 % Erläuterung der Datenstruktur: merged, left join, individual (mat\_df, por\_df)
-Zur Untersuchung dieser Faktoren eignet sich besonders ein fachübergreifende Perspektive, da eine fachspezifische unterschiedliche Auswirkung nur schwierig kausal zu erklären ist.
-Im Weiteren wird dadurch eine Erhöhung der Datenmenge erzielt, da alle Attribute vollständig in dem Datensatz der Portugiesisch-Schüler und Mathematik-Schüler enthalten sind.
+Zur Untersuchung dieser Faktoren eignet sich besonders ein fachübergreifende Perspektive. 
+Dies resultiert daraus, dass eine unterschiedliche Auswirkung auf die Mathematik- oder Portugiesischlehre nur schwierig kausal zu erklären ist.
 Die Migrierung beider Datenstände wird anhand der Attribute vorgenommen, welche im, unter (\cite[]{student_performance}) verfügbaren, R-Skript benannt werden.
 Insgesamt erhält der Datensatz damit die 382 Einträge der Schüler, welche Teil beider Datensätze sind. 
 
 % \item Auswahl der Variablen in Abhängigkeit zur Frage:
     % \subitem individuell: Geschlecht, Alter, Besuch der Vorschule, Absicht zur Weiterbildung, außerschulische Freizeit, Alkoholkonsum unter der Woche, Alkoholkonsum am Wochenende, Gesundheitszustand
     % \subitem strukturell: Grund der Schulentscheidung, Pendelzeit, häuslicher Internetzugang,
-Mit der in dieser Sektion betrachteten Faktoren ergibt sich die gleichnamige Aufteilung der Attribute zu den Aspekten der individuellen Eigenschaften und Verhaltensweisen und der strukturellen Gegebenheiten.
-Individuelle Merkmale lassen sich zum einen durch die Möglichkeit zur aktuellen Einflussnahme durch den Schüler selbst filtern.
-Zum Anderen tritt die Absicht zur Weiterbildung zwar in diesem Kontext als Prädiktor des Lernerfolgs auf, die alleinige Absicht selbst nimmt jedoch hierauf keinen unmittelbaren Einfluss.
+Die betrachteten Faktoren lassen sich nach individuellen Eigenschaften und Verhaltensweisen und der strukturellen Gegebenheiten aufteilen.
+Individuelle Merkmale werden nach der Möglichkeit zur Einflussnahme durch den Schüler gefiltert.
+Weiterhin tritt die Absicht zur Weiterbildung zwar in diesem Kontext als Prädiktor des Lernerfolgs auf, die alleinige Absicht selbst nimmt jedoch hierauf keinen unmittelbaren Einfluss.
 Damit werden die Attribute \textit{außerschulische Freizeit, Alkoholkonsum unter der Woche, Alkoholkonsum am Wochenende, Gesundheitszustand} in die Untersuchung einfließen.
 Strukturelle Gegebenheiten werden im Kontext dieser Arbeit durch den Grund der Schulentscheidung, die Pendelzeit und den häuslichen Internetzugang beschrieben.
 Aus diesen Merkmalen kann besonders der Pendelzeit und dem häuslichen Internetzugang ein potenzieller kausaler Zusammenhang anhand des täglichen zusätzlichen Reiseaufwands und dem Zugang zu Onlinewissen unterstellt werden.
 Daher werden dazu diese beiden Attribute für die Untersuchung ausgewählt.
+% \subitem : (außerschulische Freizeit, dalc, walc, health)
 % \item Grafik idee:
-    % \subitem : (außerschulische Freizeit, dalc, walc, health)
     % \subitem gestapeltes Balkendiagramm: (sum of dalc and walc, G3 gruppen)
     % \subitem Scatterplot: (Pendelzeit, Internet, G3) strukturelle Anforderungen und Noteneffekt darstellen
 
@@ -34,29 +34,28 @@ Daher werden dazu diese beiden Attribute für die Untersuchung ausgewählt.
 % c("school","sex","age","address","famsize","Pstatus","Medu","Fedu","Mjob","Fjob","reason","nursery","internet"))
 
 % \item Erläuterung der Datenstruktur: merged, left join, individual (mat\_df, por\_df)
-Der Einfluss des sozialen Umfelds eines Schülers auf dessen Lernleistung wird ähnlich der vorherigen Sektion aus fachübergreifender Perspektive betrachtet.
-Dadurch kommen für die folgende Untersuchung der gleichen Datentransformationen zur Trage.
+Der Einfluss des sozialen Umfelds eines Schülers auf dessen Lernleistung wird gleich der vorherigen Sektion aus fachübergreifender Perspektive betrachtet.
+Dadurch kommen für die folgende Untersuchung die gleichen Datentransformationen zur Trage.
 
 % \item Auswahl der Variablen in Abhängigkeit zur Frage:
 %     \subitem address, famsize, Pstatus, medu, fedu, mjob, fjob, guardian, romantic, famrel, goout
 In der Auswahl von Attributen wird sich zum einen auf das familiäre Umfeld beschränkt. 
 Dabei werden konkret die Merkmale Familiengröße und Qualität der Familienbeziehungen untersucht, und die Information zum Zusammenleben der Eltern, Bildungsgrad und Arbeitsbereich der Eltern und dem Sorgerecht exkludiert.
 Diese Entscheidung begründet sich darin, dass anzunehmen ist, dass sich die Effekte der ausgeschlossenen Variablen in der Qualität der Familienbeziehungen konsolidiert wiederspiegeln.
-Zum anderen werden 
-
-% \item Grafik idee:
+Zum anderen werden die Variablen romantic und goout der Analyse hinzugefügt, um das soziale Verhältnis mit gleichaltrigen zu beleuchten.
 %     \subitem (famsize, famrel)
 %     \subitem (romantic, goout)
+% \item Grafik idee:
 %     \subitem Scatterplot: Bestimmen von Personengruppen anhand von visuellem (1-2) oder maschinellem (3-x) Clustering.
 %     \subitem Säulendiagramm: Median der Notenleistung (G3) zu den einzelnen Personengruppen
 
 \section{Individuelle Leistungsbereitschaft}
 
 % \item Erläuterung der Datenstruktur: merged, left join, individual (mat\_df, por\_df)
-In der Untersuchung des Einflusses der individuellen Leistungsbereitschaft auf die Lernleistung werden die ursprünglichen Datensätze verwendet.
-Grund dafür ist der fehlende Zusammenhang zwischen der Leistungsbereitschaft in einem Fach und der erzielten Lernleistung im anderen Fach.
-Zu Berücksichtigen ist damit die unterschiedliche Datensatzgröße mit 395 (Mathematik-Schüler) und 649 (Portugiesisch-Schüler) Einträgen.
-Entsprechend werden in dieser Sektion alle entwickelten Visualisierungen jeweils mit unterschiedlicher Datengrundlage dargestellt.
+In der Untersuchung des Einflusses der individuellen Leistungsbereitschaft auf die Lernleistung werden die ursprünglichen fachspezifischen Datensätze verwendet.
+Grund dafür ist der fehlende kausale Zusammenhang zwischen der Leistungsbereitschaft in einem Fach und der erzielten Lernleistung im anderen Fach.
+Zu Berücksichtigen sind damit die unterschiedliche Datensatzgröße mit 395 (Mathematik-Schüler) und 649 (Portugiesisch-Schüler) Einträgen.
+Entsprechend werden in dieser Sektion alle entwickelten Visualisierungen jeweils mit beiden unterschiedlichen Datengrundlagen dargestellt.
 
 % \item Auswahl der Variablen in Abhängigkeit zur Frage:
     % \subitem studytime, failures, activities, schoolsup, famsup, paid, absences
