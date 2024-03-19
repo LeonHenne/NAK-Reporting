@@ -4,6 +4,8 @@ src/data/*
 
 ## final pdf product
 *.pdf
+*.html
+*.png
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
