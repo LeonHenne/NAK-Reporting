@@ -13,33 +13,47 @@ Dies resultiert daraus, dass eine unterschiedliche Auswirkung auf die Mathematik
 Die Migrierung beider Datenstände wird anhand der Attribute vorgenommen, welche im, unter (\cite[]{student_performance}) verfügbaren, R-Skript benannt werden.
 Insgesamt erhält der Datensatz damit die 382 Einträge der Schüler, welche Teil beider Datensätze sind. 
 Sofern unter den ausgewählten Attributen nominale Merkmale vorliegen, welche nicht bei der Datenmigrierung berücksichtigt wurden, kann es hier zu widersprüchlichen Angaben kommen.
-Diese widersprüchlichen Dateneinträge sind zusätzlich aus der Betrachtung zu nehmen.
+Diese widersprüchlichen Dateneinträge können nicht ohne weiteres Wissen aufgeklärt, oder ein Mittelmaß daraus bestimmt werden und sind daher zusätzlich aus der Betrachtung zu nehmen.
 
 % \item Auswahl der Variablen in Abhängigkeit zur Frage:
-    % \subitem individuell: Geschlecht, Alter, Besuch der Vorschule, Absicht zur Weiterbildung, außerschulische Freizeit, Alkoholkonsum an Arbeitstagen, Alkoholkonsum am Wochenende, Gesundheitszustand
-    % \subitem strukturell: Grund der Schulentscheidung, Pendelzeit, häuslicher Internetzugang,
-Die betrachteten Faktoren lassen sich nach individuellen Eigenschaften und Verhaltensweisen und der strukturellen Gegebenheiten aufteilen.
+Die betrachteten Faktoren lassen sich nach individuellen Verhaltensweisen und der strukturellen Gegebenheiten aufteilen.
 Individuelle Merkmale werden nach der Möglichkeit zur Einflussnahme durch den Schüler gefiltert.
-Weiterhin tritt die Absicht zur Weiterbildung zwar in diesem Kontext als Prädiktor des Lernerfolgs auf, die alleinige Absicht selbst nimmt jedoch hierauf keinen unmittelbaren Einfluss.
-Damit werden die Attribute \textit{außerschulische Freizeit, Alkoholkonsum an Arbeitstagen, Alkoholkonsum am Wochenende, Gesundheitszustand} in die Untersuchung einfließen.
+Weiterhin tritt die Absicht zur Weiterbildung zwar in diesem Kontext als möglicher Prädiktor des Lernerfolgs auf, die alleinige Absicht selbst nimmt jedoch hierauf keinen unmittelbaren Einfluss.
+Damit werden die Attribute \textit{Alkoholkonsum an Arbeitstagen, Alkoholkonsum am Wochenende} in die Untersuchung einfließen.
 Strukturelle Gegebenheiten werden im Kontext dieser Arbeit durch den Grund der Schulentscheidung, die Pendelzeit und den häuslichen Internetzugang beschrieben.
-Aus diesen Merkmalen kann besonders der Pendelzeit und dem häuslichen Internetzugang ein potenzieller kausaler Zusammenhang anhand des täglichen zusätzlichen Reiseaufwands und dem Zugang zu Onlinewissen unterstellt werden.
-Daher werden dazu diese beiden Attribute für die Untersuchung ausgewählt.
-% \subitem : (außerschulische Freizeit, dalc, walc, health)
-% \subitem : (Pendelzeit, häuslicher Internetzugang)
-% \item Grafik idee:
-    % \subitem gestapeltes Balkendiagramm: (sum of dalc and walc, G3 gruppen)
-    % \subitem Scatterplot: (Pendelzeit, Internet, G3) strukturelle Anforderungen und Noteneffekt darstellen
+Aus diesen Merkmalen kann besonders der \textit{Pendelzeit} und dem \textit{häuslichen Internetzugang} ein potenzieller kausaler Zusammenhang unterstellt werden, anhand des täglichen zusätzlichen Reiseaufwands und dem Zugang zu Onlinewissen.
+Daher werden diese beiden Attribute für die Untersuchung ausgewählt.
 
-% ~1100 WORDS UNTIL HERE !!! 
-
+\clearpage
 \begin{figure}[htb]
     \centering
     \includegraphics[width=1.0\textwidth]{src/visuals/image/stacked_bar.png}
-    \caption{In der Literatur beschriebene Aspekte von datengesteuerten Organisationen}
+    \caption{Einfluss von Alkoholkonsum auf die Lernleistung}
     \label{fig:stacked_bar}
 \end{figure}
 
+% Vorstellung der Visualisierung
+Die Untersuchung des Einflusses individueller Verhaltensweisen auf die Lernleistung wird u. a. anhand des wöchentlichen Alkoholkonsums vorgenommen.
+Hierzu dient das in Abbildung \ref{fig:stacked_bar} dargestellte gestapelte Säulendiagramm.
+Mit dieser Diagrammart wird die Aggregation von Daten notwendig, womit jedoch auch eine Vereinfachung der Verständlichkeit einhergeht.
+Dem Teil der Zielgruppe ohne statistischen Hintergrund ermöglicht dies besonders zu Beginn einer Präsentation einen leichteren Zugang zu der dargelegten Thematik.
+Die Grafik ordnet auf der X-Achse die Schüler anhand ihres Medians der finalen Noten beider Fächer in Gruppen von je zwei Punkten ein.
+Auf der Y-Achse wird der Median des von den Schülern angegebenen Alkoholkonsums auf der Skala Null bis Zehn abgetragen.
+Der Wertebereich ergibt sich aus der Addition der Maximalwerte beider Kategorien.
+In der Grafik werden die Kategorien des Alkoholkonsums an Arbeitstagen und an Wochenenden berücksichtigt.
+Farblich sind diese Kategorien zu den typischen Farben von Alkoholprodukten wie Wein und Bier gekennzeichnet, um die Zuordnung zum Thema zu unterstreichen.
+Zusätzlich können die Farben den Warnstufen einer Ampel zugeordnet werden, bei dem ein Alkoholkonsum an Werktagen häufig kritischer eingeschätzt wird, als an Wochenendtagen.
+Die Höhe der Säule einer Schülergruppe ergibt sich folglich aus der Summe der Mediane beider Kategorien.
+
+% Analyse der Visualisierung
+Der \ref*{fig:stacked_bar} kann entnommen werden, dass die Schülergruppen nahezu alle einen sehr geringen Alkoholkonsum an Werktagen aufweisen, und sich hauptsächlich durch ihren Konsum am Wochenende unterscheiden.
+Eine Ausnahme bildet dabei die Gruppe, welche im Median beider Fächer die geringste Punktzahl von zwei bis vier aufweist. 
+Hier liegt bereits der Konsum an Werktagen als einziges leicht über allen anderen Gruppen.
+Nimmt man die zweite Kategorie mit in die Betrachtung auch zeigt dieselbe Gruppe erneut einen stärkeren Alkoholkonsum auf.
+Insgesamt liegt die Gruppe mit der geringsten Medianpunktzahl mit 1.5 Einschätzungspunkten über allen anderen Gruppen, was einen negativen Effekt des Alkoholkonsums auf die Lernleistung vermuten lässt.
+Unterstützt wird diese Vermutung durch die Untersuchung der weiteren Gruppen. 
+Der Verlauf des Alkoholkonsums zeigt hier, dass der Konsum am Wochenende stufenweise ab einer Mediannote von 14 und ab einer Mediannote von 18 absinkt. 
+Eine Ausnahme hierzu stellt die Gruppe im Bereich von vier bis sechs Mediannotenpunkten dar, dessen Konsum gleich dem der Gruppe mit der höchsten Mediannotenpunktzahl ist.
 
 \begin{figure}[htb]
     \centering
@@ -47,6 +61,10 @@ Daher werden dazu diese beiden Attribute für die Untersuchung ausgewählt.
     \caption{In der Literatur beschriebene Aspekte von datengesteuerten Organisationen}
     \label{fig:violin}
 \end{figure}
+
+% Vorstellung der Visualisierung
+
+% Analyse der Visualisierung
 
 \section{Soziales Umfeld}
 
